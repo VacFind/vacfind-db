@@ -14,7 +14,7 @@ mod graphql_schema;
 
 use crate::graphql_schema::{create_schema, Schema};
 
-const URL = "localhost:8080";
+const URL: &str = "localhost:8080";
 
 fn main() -> io::Result<()> {
     let schema = std::sync::Arc::new(create_schema());
@@ -45,7 +45,7 @@ fn graphql(
 }
 
 fn graphiql() -> HttpResponse {
-        let html = graphiql_source(format!("http://{}/graphiql", URL));
+        let html = graphiql_source(&format!("http://{}/graphiql", URL.to_owned()).to_owned());
         HttpResponse::Ok()
             .content_type("text/html; charset=utf-8")
             .body(html)

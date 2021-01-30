@@ -37,14 +37,14 @@ impl QueryRoot {
 		Jurisdiction {
 		id: 1,
 		name: "Test1".to_owned(),
-		source: "https://127.0.0.1/source",
-		public_link: "https://127.0.0.1/link",
+		source: "https://127.0.0.1/source".to_owned(),
+		public_link: "https://127.0.0.1/link".to_owned(),
 		},
 		Jurisdiction {
 		id: 2,
 		name: "Test2".to_owned(),
-		source: "https://127.0.0.1/source",
-		public_link: "https://127.0.0.1/link",
+		source: "https://127.0.0.1/source".to_owned(),
+		public_link: "https://127.0.0.1/link".to_owned(),
 		}
 	]
 	}
